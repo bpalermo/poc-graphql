@@ -1,0 +1,13 @@
+thorntail:
+  datasources:
+    jdbc-drivers:
+      com.mysql:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        xa-datasource-class-name: com.mysql.cj.jdbc.MysqlXADataSource
+        driver-module-name: com.mysql
+    data-sources:
+      MySQLDS:
+        driver-name: com.mysql
+        connection-url: jdbc:mysql://${env.DB_ADDR}:${env.DB_PORT:3306}/${env.DB_DATABASE}${env.JDBC_PARAMS}
+        user-name: ${env.DB_USER}
+        password: ${env.DB_PASSWORD}
