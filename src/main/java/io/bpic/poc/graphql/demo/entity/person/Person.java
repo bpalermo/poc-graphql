@@ -29,7 +29,7 @@ public class Person extends AbstractEntity {
     private String lastName;
 
     @Getter
-    @OneToMany(mappedBy = "person", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "person", fetch = FetchType.LAZY)
     private Set<Book> books = new HashSet<>();
 
 }
